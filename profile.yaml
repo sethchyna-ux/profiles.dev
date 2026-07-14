@@ -3,15 +3,15 @@
 # All fields are optional - share only what you're comfortable with.
 
 name: derrick vines
-bio: up n coming ai engineering student
+bio:
 location: Elizabethton, TN / United States
 email: derrick.vines@students.maestrocollege.edu
 website: https://www.chiemera.net
 
 # Social Links (handle or full URL)
-twitter: na
+twitter:
 github: sethchyna-ux
-linkedin: na
+linkedin:
 
 # Professional Skills
 skills:
@@ -44,7 +44,7 @@ experience:
   # Add more experiences
 
 # Education
-education: college
+education:
   - institution: University Name
     degree: Your Degree
     field: Field of Study
