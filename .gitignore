@@ -1,0 +1,16 @@
+# Action build files
+action/node_modules/
+action/dist/
+action/*.log
+
+# User customizations to ignore
+.env
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Coverage
+coverage/
+*.tgz

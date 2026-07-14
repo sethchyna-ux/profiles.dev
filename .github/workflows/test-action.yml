@@ -1,0 +1,47 @@
+name: Test Action
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'action/**'
+      - '.github/workflows/test-action.yml'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'action/**'
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: Install dependencies
+        run: |
+          cd action
+          npm ci
+        
+      - name: Run tests
+        run: |
+          cd action
+          npm test
+        
+      - name: Build action
+        run: |
+          cd action
+          npm run build
+        
+      - name: Test action (dry run)
+        uses: ./
+        with:
+          # api-endpoint: 'https://httpbin.org/post'  # Uncomment for mock testing
+          profile-path: 'profile.yaml'
+          debug: 'true'
+        continue-on-error: true
