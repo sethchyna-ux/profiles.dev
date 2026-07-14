@@ -2,34 +2,34 @@
 # This is your profile template. Customize it to showcase who you are.
 # All fields are optional - share only what you're comfortable with.
 
-name: Test User
-bio: A brief description about yourself
-location: City, Country
-email: your.email@example.com
-website: https://yourwebsite.com
+name: derrick vines
+bio: up n coming ai engineering student
+location: Elizabethton, TN / United States
+email: derrick.vines@students.maestrocollege.edu
+website: https://www.chiemera.net
 
 # Social Links (handle or full URL)
-twitter: "@yourhandle"
-github: yourusername
-linkedin: https://linkedin.com/in/yourprofile
+twitter: na
+github: sethchyna-ux
+linkedin: na
 
 # Professional Skills
 skills:
-  - JavaScript
-  - Python
-  - Docker
+  - JavaScript student
+  - Python student 
+  - Docker student
   # Add more skills
 
 languages:
-  - English
-  - Spanish
+  - English yes
+  - Spanish no 
   # Add more languages
 
 # Projects You're Proud Of
 projects:
-  - name: Amazing Project
-    description: Brief description of what it does
-    url: https://github.com/yourusername/project
+  - name: hydra
+    description: new operating system
+    url: www.chiemera.net
     role: Creator
 
   # Add more projects
@@ -44,7 +44,7 @@ experience:
   # Add more experiences
 
 # Education
-education:
+education: student ai engineering
   - institution: University Name
     degree: Your Degree
     field: Field of Study
