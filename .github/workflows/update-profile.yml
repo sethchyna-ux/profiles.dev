@@ -17,4 +17,4 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Update profiles.dev
-        uses: nomadops/profiles.dev@v2
+        uses: nomadops/profiles.dev@3233e2e5c2e8f75b8e9bf3991c4fb778ad020cf4
