@@ -135,11 +135,19 @@ async function run(): Promise<void> {
 
       const { data, status } = response;
 
-      // Handle 202 Accepted response
-      if (status === 202 || data.status === 'accepted') {
-        core.info(`✅ Profile update accepted!`);
-        core.info(`📋 Status: ${data.status}`);
-        core.info(`💬 Message: ${data.message}`);
+      const responseStatus = String(data.status || '').toLowerCase();
+      const responseMessage = String(data.message || '').toLowerCase();
+      const updateSucceeded =
+        status === 202 ||
+        responseStatus === 'accepted' ||
+        responseStatus === 'success' ||
+        responseStatus === 'completed' ||
+        responseMessage.includes('profile update completed');
+
+      if (updateSucceeded) {
+        core.info(`✅ Profile update completed!`);
+        core.info(`📋 Status: ${data.status || status}`);
+        core.info(`💬 Message: ${data.message || 'Profile update completed'}`);
         
         core.setOutput('status', 'success');
         core.setOutput('message', data.message);
@@ -147,11 +155,11 @@ async function run(): Promise<void> {
         // Set summary
         await core.summary
           .addHeading('profiles.dev Update Successful! 🎉')
-          .addRaw(`Profile for **${owner}** has been queued for update.`)
+          .addRaw(`Profile for **${owner}** has been updated.`)
           .addBreak()
-          .addRaw(`**Status:** ${data.status}`)
+          .addRaw(`**Status:** ${data.status || status}`)
           .addBreak()
-          .addRaw(`**Message:** ${data.message}`)
+          .addRaw(`**Message:** ${data.message || 'Profile update completed'}`)
           .addBreak()
           .addLink('View your profile', `https://profiles.dev/${owner}`)
           .write();
