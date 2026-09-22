@@ -1,69 +1,36 @@
-# Welcome to profiles.dev! 
-# This is your profile template. Customize it to showcase who you are.
-# All fields are optional - share only what you're comfortable with.
-
-name: derrick vines
-bio:
+name: Derrick Vines
+bio: Student developer building terminal tooling, operating-system experiments, and AI-assisted developer workflows.
 location: Elizabethton, TN / United States
-email: derrick.vines@students.maestrocollege.edu
 website: https://www.chiemera.net
 
-# Social Links (handle or full URL)
-twitter:
+# Social links
 github: sethchyna-ux
-linkedin:
 
-# Professional Skills
+# Professional skills
 skills:
-  - JavaScript student
-  - Python student 
-  - Docker student
-  # Add more skills
+  - JavaScript
+  - Python
+  - Docker
+  - Rust
+  - Terminal tooling
+  - AI-assisted developer workflows
 
 languages:
-  - English yes
-  - Spanish no 
-  # Add more languages
+  - English
 
-# Projects You're Proud Of
 projects:
-  - name: hydra
-    description: new operating system
-    url: www.chiemera.net
+  - name: Well
+    description: GPU-accelerated terminal workspace focused on local-first productivity, AI assistance, and production-ready macOS packaging.
+    url: https://github.com/sethchyna-ux/well
     role: Creator
 
-  # Add more projects
+  - name: Hydra
+    description: Experimental operating-system project.
+    url: https://www.chiemera.net
+    role: Creator
 
-# Work Experience
-experience:
-  - company: Current Company
-    position: Your Title
-    duration: 2022 - Present
-    description: What you do there
-
-  # Add more experiences
-
-# Education
-education:
-  - institution: University Name
-    degree: Your Degree
-    field: Field of Study
-    year: 2020
-
-  # Add more education
-
-# Certifications
-certifications:
-  - name: Certification Name
-    issuer: Issuing Organization
-    year: 2023
-    url: https://verification-link.com
-
-  # Add more certifications
-
-# Feel free to add custom fields!
-# interests:
-#   - Open Source
-#   - Machine Learning
-#   - Photography
-# Test update
+interests:
+  - Open source
+  - Terminal UX
+  - Operating systems
+  - Developer tools
