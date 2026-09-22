@@ -16,5 +16,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: action/package-lock.json
+
+      - name: Build local profiles.dev action
+        working-directory: action
+        run: |
+          npm ci
+          npm run build
+
       - name: Update profiles.dev
-        uses: nomadops/profiles.dev@3233e2e5c2e8f75b8e9bf3991c4fb778ad020cf4
+        uses: ./action
